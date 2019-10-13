@@ -37,5 +37,7 @@ Check out the following resources:
  
 ## What to contribute?
 - You can check the [Issues](https://github.com/PawanKolhe/C-Algorithms/issues) tab on the top.
-- You can also contribute your solutions to problems from leetcode: [LeetCode](https://leetcode.com/problemset/algorithms/)
+- You can also contribute your solutions to problems from LeetCode: [LeetCode](https://leetcode.com/problemset/algorithms/)
   - Make sure to place your code in the '/LeetCodeSolutions' folder with the serial number of the problem in the file name. 
+- You can also contribute your solutions to problems from Project Euler: [Project Euler](https://projecteuler.net/archives)
+  - Make sure to place your code in the '/ProjectEulerSolutions' folder with the serial number of the problem in the file name. 
