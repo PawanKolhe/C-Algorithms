@@ -32,7 +32,7 @@ git push origin <branch-name>
 ```
 - Create a New Pull Request (PR) from your forked repository on GitHub (Click the 'New Pull Request' Button located at the top of your repo)
 - Wait for your PR review and merge approval!
-- Congrats! **Star this repository** (next to fork) if you had fun!
+- **Star this repository** (next to fork) if you had fun! It helps a lot :)
  
 ## New to Open Source?
 Check out the following resources:
