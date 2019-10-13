@@ -9,7 +9,7 @@ int main (int argc, char* argv[])
 {
     if(argc != 2)
     {
-        printf("Usage: ./binary value\n");
+        printf("Usage: ./binarySearch value\n");
         return 1;
     }
     
