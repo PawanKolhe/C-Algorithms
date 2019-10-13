@@ -8,6 +8,10 @@ Contribute algorithms written in C language. It's beginner friendly! Feel free t
 ```
 git clone https://github.com/<insert-your-username>/C-Algorithms.git
 ```
+- **Change directory** to get inside repository:
+```
+cd C-Algorithms
+```
 - **Create a branch** for a new algorithm contribution:
 ```
 git checkout -b feature/<name-of-algorithm>
