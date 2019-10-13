@@ -44,4 +44,5 @@ Check out the following resources:
 - You can also contribute your solutions to problems from LeetCode: [LeetCode](https://leetcode.com/problemset/algorithms/)
   - Make sure to place your code in the '/LeetCodeSolutions' folder with the serial number of the problem in the file name. 
 - You can also contribute your solutions to problems from Project Euler: [Project Euler](https://projecteuler.net/archives)
-  - Make sure to place your code in the '/ProjectEulerSolutions' folder with the serial number of the problem in the file name. 
+  - Make sure to place your code in the '/ProjectEulerSolutions' folder with the serial number of the problem in the file name.
+- If there is anything else you want to add, just create an 'Issue' [here](https://github.com/PawanKolhe/C-Algorithms/issues).
