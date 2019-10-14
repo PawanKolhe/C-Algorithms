@@ -1,5 +1,5 @@
 #include <stdio.h> 
-
+#include<conio.h>
 void swap(int *xp, int *yp) 
 { 
 	int temp = *xp; 
