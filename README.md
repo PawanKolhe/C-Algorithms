@@ -20,19 +20,19 @@ git checkout -b feature/<name-of-algorithm>
 ```
 git checkout -b bugfix/<title-of-issue>
 ```
-- Make your changes (choose from the Tasks above!)
-- Stage and commit changes:
+- Make your changes locally
+- **Stage** and **commit** changes:
 ```
 git add .
 git commit -m 'commit message'
 ```
-- Push changes to GitHub:
+- **Push** changes to GitHub:
 ```
 git push origin <branch-name>
 ```
-- Create a New Pull Request (PR) from your forked repository on GitHub (Click the 'New Pull Request' Button located at the top of your repo)
+- Create a **New Pull Request** (PR) from your forked repository on GitHub (Click the 'New Pull Request' Button located at the top of your repo)
 - Wait for your PR review and merge approval!
-- **Star this repository** (next to fork) if you had fun! It helps a lot :)
+- ***Star this repository*** (next to fork on top right) if you had fun! It helps a lot :)
  
 ## New to Open Source?
 Check out the following resources:
@@ -42,7 +42,7 @@ Check out the following resources:
 ## What to contribute?
 - You can check the [Issues](https://github.com/PawanKolhe/C-Algorithms/issues) tab on the top.
 - You can also contribute your solutions to problems from LeetCode: [LeetCode](https://leetcode.com/problemset/algorithms/)
-  - Make sure to place your code in the '/LeetCodeSolutions' folder with the serial number of the problem in the file name. 
+  - Make sure to place your code in '/LeetCodeSolutions' folder with number and name of the problem as the file name. 
 - You can also contribute your solutions to problems from Project Euler: [Project Euler](https://projecteuler.net/archives)
-  - Make sure to place your code in the '/ProjectEulerSolutions' folder with the serial number of the problem in the file name.
+  - Make sure to place your code in '/ProjectEulerSolutions' folder with number and name of the problem as the file name.
 - If there is anything else you want to add, just create an 'Issue' [here](https://github.com/PawanKolhe/C-Algorithms/issues).
