@@ -32,17 +32,17 @@ git push origin <branch-name>
 ```
 - Create a **New Pull Request** (PR) from your forked repository on GitHub (Click the 'New Pull Request' Button located at the top of your repo)
 - Wait for your PR review and merge approval!
-- ***Star this repository*** (next to fork on top right) if you had fun! It helps a lot :)
- 
+- ***Star this repository*** if you had fun! :)
+  
 ## New to Open Source?
 Check out the following resources:
 - [How to Create a Pull Request](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)
 - [An Introduction to Open Source](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source)
  
 ## What to contribute?
-- You can check the [Issues](https://github.com/PawanKolhe/C-Algorithms/issues) tab on the top.
+- You can check the [Issues](https://github.com/PawanKolhe/C-Algorithms/issues) tab on the top and comment on the one you want to work on.
+- You can also suggest addition of new algorithms. Just create an 'Issue' [here](https://github.com/PawanKolhe/C-Algorithms/issues).
 - You can also contribute your solutions to problems from LeetCode: [LeetCode](https://leetcode.com/problemset/algorithms/)
-  - Make sure to place your code in '/LeetCodeSolutions' folder with number and name of the problem as the file name. 
+  - Place your code in '/LeetCodeSolutions' folder with *number* and *name* of the problem as the file name. 
 - You can also contribute your solutions to problems from Project Euler: [Project Euler](https://projecteuler.net/archives)
-  - Make sure to place your code in '/ProjectEulerSolutions' folder with number and name of the problem as the file name.
-- If there is anything else you want to add, just create an 'Issue' [here](https://github.com/PawanKolhe/C-Algorithms/issues).
+  - Place your code in '/ProjectEulerSolutions' folder with *number* and *name* of the problem as the file name.
