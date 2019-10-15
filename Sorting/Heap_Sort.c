@@ -1,50 +1,56 @@
-# include <stdio.h>
+#include <stdio.h>
 
-void heap_sort(int[], int);
- 
-int main(){
-	int a[50], n, i;
-	printf("How many elements? ");
-	scanf("%d", &n);
-	printf("\nEnter array elements: ");
-	
-	for(i = 0; i < n; i++)
-		scanf("%d", &a[i]);
-		
-	heap_sort(a, n);
-	printf("\nArray after sorting: ");
-	
-	for(i = 0; i < n; i++)
-		printf("%d ", a[i]);
-	
-	printf("\n");
-	return 0;		
+void heapSort(int *unsorted, int n);
+
+void heapify(int *unsorted, int index, int heap_size) {
+    int temp;
+    int largest = index;
+    int left_index = 2 * index;
+    int right_index = 2 * index + 1;
+
+    if (left_index < heap_size && *(unsorted + left_index) > *(unsorted + largest)) {
+        largest = left_index;
+    }
+
+    if (right_index < heap_size && *(unsorted + right_index) > *(unsorted + largest)) {
+        largest = right_index;
+    }
+
+    if (largest != index) {
+        temp = *(unsorted + largest);
+        *(unsorted + largest) = *(unsorted + index);
+        *(unsorted + index) = temp;
+        heapify(unsorted, largest, heap_size);
+    }
 }
- 
-void heap_sort(int a[], int size){
-	int i = size / 2, root, child, t;
-	while(1){
-		if(i > 0){
-			i--;
-			t = a[i];
-		} else{
-			size--;
-			if(size <= 0) return;
-			t = a[size];
-			a[size] = a[0];
-		}
-		root = i;
-		child = i * 2 + 1;
-		while(child < size){
-			if((child + 1 < size) && (a[child + 1] > a[child]))
-				child++;
-			if(a[child] > t){
-				a[root] = a[child];
-				root = child;
-				child = root * 2 + 1;
-			} else
-				break;
-		}
-		a[root] = t;
-	}
+
+void heapSort(int *unsorted, int n) {
+    int temp;
+    for (int i = n / 2 - 1; i > -1; i--) {
+        heapify(unsorted, i, n);
+    }
+    for (int i = n - 1; i > 0; i--) {
+        temp = *(unsorted);
+        *(unsorted) = *(unsorted + i);
+        *(unsorted + i) = temp;
+        heapify(unsorted, 0, i);
+    }
+}
+
+int main() {
+    int a[30],n,i;
+    printf("Enter no of elements:");
+    scanf("%d",&n);
+    printf("Enter array elements:");
+
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+
+    heapSort(a, i);
+
+    printf("\nSorted array is :");
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+
+    return 0;
 }
