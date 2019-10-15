@@ -1,46 +1,73 @@
-# include <stdio.h>
-# include <stdlib.h>
+#include <stdio.h>
 
-void radix_sort(int[], int);
- 
-int main(){
-	int a[50], n, i;
-	printf("How many elements? ");
-	scanf("%d", &n);
-	printf("\nEnter array elements: ");
-	
-	for(i = 0; i < n; i++)
-		scanf("%d", &a[i]);
-		
-	radix_sort(a, n);
-	printf("\nArray after sorting: ");
-	
-	for(i = 0; i < n; i++)
-		printf("%d ", a[i]);
-	
-	printf("\n");
-	return 0;		
+void radixSort(int *array, int size);
+
+
+int findLargestNum(int *array, int size){
+
+  int i;
+  int largestNum = -1;
+
+  for(i = 0; i < size; i++){
+    if(array[i] > largestNum)
+      largestNum = array[i];
+  }
+
+  return largestNum;
 }
- 
-void radix_sort(int a[], int size){
-	int i;
-	int *b;
-	int bigger = a[0];
-	int exp = 1;
 
-	b = (int *)calloc(size, sizeof(int));
+void radixSort(int *array, int size) {
 
-	for(i = 0; i < size; i++){
-		if(a[i] > bigger) bigger = a[i];
-	}
+  // Base 10 is used
+  int i;
+  int semiSorted[size];
+  int significantDigit = 1;
+  int largestNum = findLargestNum(array, size);
 
-	while(bigger/exp > 0){
-		int bucket[10] = { 0 };
-		for(i = 0; i < size; i++) bucket[(a[i]/exp) % 10]++;
-		for(i = 1; i < 10; i++) bucket[i] += bucket[i - 1];
-		for(i = size - 1; i>= 0; i--) b[--bucket[(a[i] / exp) % 10]] = a[i];
-		for(i = 0; i < size; i++) a[i] = b[i];
-		exp *= 10;
-	}
-	free(b);
+  // Loop until we reach the largest significant digit
+  while (largestNum / significantDigit > 0){
+
+    int bucket[10] = { 0 };
+
+    // Counts the number of "keys" or digits that will go into each bucket
+    for (i = 0; i < size; i++)
+      bucket[(array[i] / significantDigit) % 10]++;
+
+    /**
+     * Add the count of the previous buckets,
+     * Acquires the indexes after the end of each bucket location in the array
+		 * Works similar to the count sort algorithm
+     **/
+    for (i = 1; i < 10; i++)
+      bucket[i] += bucket[i - 1];
+
+    // Use the bucket to fill a "semiSorted" array
+    for (i = size - 1; i >= 0; i--)
+      semiSorted[--bucket[(array[i] / significantDigit) % 10]] = array[i];
+
+
+    for (i = 0; i < size; i++)
+      array[i] = semiSorted[i];
+
+    // Move to next significant digit
+    significantDigit *= 10;
+  }
+}
+
+int main() {
+	int a[30],n,i;
+	printf("Enter no of elements:");
+	scanf("%d",&n);
+	printf("Enter array elements:");
+
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+
+	radixSort(a, i);
+
+	printf("\nSorted array is :");
+	for(i=0;i<n;i++)
+		printf("%d ",a[i]);
+
+	return 0;
 }
