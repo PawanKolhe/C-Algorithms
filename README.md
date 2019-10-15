@@ -33,6 +33,12 @@ git push origin <branch-name>
 - Create a **New Pull Request** (PR) from your forked repository on GitHub (Click the 'New Pull Request' Button located at the top of your repo)
 - Wait for your PR review and merge approval!
 - ***Star this repository*** if you had fun! :)
+
+### Syncing Forked repo with Original repo:
+```
+git remote add upstream https://github.com/PawanKolhe/C-Algorithms.git
+git pull upstream master
+```
   
 ## New to Open Source?
 Check out the following resources:
