@@ -11,7 +11,7 @@ int reverse(int x){
         remainder = x%10;
 
         //check for integer overflow
-        if(num*10 + remainder>INT_MAX|num*10 + remainder<INT_MIN){
+        if(num*10 + remainder>INT_MAX||num*10 + remainder<INT_MIN){
             ReversedInteger = 0;
             break;
         }
