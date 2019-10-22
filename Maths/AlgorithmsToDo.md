@@ -1,4 +1,3 @@
 # Maths - TO DO
-- Power
-- Factorial
+- Power programmed by JLHC
 - Check if Prime Number
