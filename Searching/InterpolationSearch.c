@@ -5,18 +5,18 @@ int interpolationSearch(int arr[], int n, int x){
     //For sorted array
 
     while (low <= high && x >= arr[low] && x <= arr[high]){
-        if (lo == high){
-            if arr[lo]==x{
+        if (low == high){
+            if (x == arr[low]){
                 return low;
             }
             return -1;
         }
 
         int pos = low + (((double)(high-low)/(arr[high]-arr[low]))*(x-arr[low]));
-        if arr[pos]==x{
+        if (x == arr[pos]){
             return pos;
         }
-        if (arr[pos]<x){
+        if (x > arr[pos]){
             low = pos+1;
         }
         else {
@@ -38,9 +38,7 @@ int main(){
     int index = interpolationSearch(arr, n, x); 
   
     // If element was found 
-    if (index != -1) 
-        printf("Element found at index %d", index); 
-    else
-        printf("Element not found."); 
+    if (-1 != index) printf("Element found at index %d", index); 
+    else printf("Element not found."); 
     return 0; 
 }
