@@ -1,37 +1,31 @@
 #include <stdio.h>
-#define MAX 100
- 
+
 int main()
 {
-   int n, c, d, a[MAX], b[MAX];
- 
-   printf("Enter the number of elements in array\n");
-   scanf("%d", &n);
- 
-   printf("Enter array elements\n");
- 
-   for (c = 0; c < n ; c++)
-      scanf("%d", &a[c]);
- 
-   /*
-    * Copying elements into array b starting from end of array a
-    */
- 
-   for (c = n - 1, d = 0; c >= 0; c--, d++)
-      b[d] = a[c];
- 
-   /*
-    * Copying reversed array into the original.
-    * Here we are modifying original array, this is optional.
-    */
- 
-   for (c = 0; c < n; c++)
-      a[c] = b[c];
- 
-   printf("Reverse array is\n");
- 
-   for (c = 0; c < n; c++)
-      printf("%d\n", a[c]);
- 
-   return 0;
+    int n;
+
+    printf("Enter the number of elements in array\n");
+    scanf("%d", &n);
+
+    int a[n];
+    printf("Enter array elements\n");
+
+    for(int i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    // swap array elements in one array with math!
+
+    for(int i=0, c=n-1; i<n/2; i++, c--){
+                              // consider a = 2 , b = 3
+        a[i] += a[c];         //  a = a + b -> a = 5
+        a[c] = a[i] - a[c];   //  b = a - b -> b = 2
+        a[i] -= a[c];         //  a = a - b -> a = 3
+    }
+
+    printf("Reverse array is\n");
+
+    for(int i=0; i<n; i++)
+        printf("%d\n", a[i]);
+
+    return 0;
 }
