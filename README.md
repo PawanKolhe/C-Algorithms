@@ -1,4 +1,4 @@
-# C Algorithms
+# Program C : Algorithms
 ### All algorithms implemented in C (for learning)
 Contribute algorithms written in C language. It's beginner friendly! Feel free to add new algorithms or open an issue and commit if you have a more efficient way of implementing an algorithm. You can 
 
